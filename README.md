@@ -13,7 +13,12 @@ With as much social and purchasing power as these communities wield, it begs the
 
 - [Billboard Hot 100 from Kaggle](https://www.kaggle.com/dhruvildave/billboard-the-hot-100-songs) which documents the position of every song on the Hot 100 from week to week since the 1950's.
 - [Spotify API](https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-recommendations) to discover a song's acousticness, danceability, energy, and other qualities
-- [Spotify cvs](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks?select=tracks.csv)
+- [Spotify csv from Kaggle](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks?select=tracks.csv)
+
+While we're working on accessing data from the API, we'll be using the Spotify csv's to get our project kickstarted.
 
 ## Group Communication
 Our group is communicating through Slack and organizing outside Zoom meetings when necessary. If someone needs help, they post in Slack and whoever is available will help out. Slack notifications are on.
+
+## Outlines
+To see our database and machine learning model outlines, please reference the [K-Pop Discovery pdf](https://github.com/jveilleux2314/Group-Project/tree/main/Submissions/Deliverable%201).
