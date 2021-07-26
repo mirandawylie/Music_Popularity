@@ -1,0 +1,7 @@
+ML model
+
+Use oversampling techniques to tackle the imbalance of data. The imbalance is caused by the 
+Spotify dataset of songs being 600,000 tracks but we don’t know which ones were ever on the top 100
+billboard yet so, we will choose over_sampling methods in anticipation of there being an abundance of non-top 100 songs.
+- Random Over Sampling
+- SMOTE Over Sampling
