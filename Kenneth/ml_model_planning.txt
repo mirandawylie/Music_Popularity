@@ -13,3 +13,8 @@ use of algorithms to predict a numerical value.
 - Decision Tree
 - Neural Network
 - K-Nearest Neighbors
+
+According to 
+https://srnghn.medium.com/machine-learning-trying-to-predict-a-numerical-value-8aafb9ad4d36 
+these are the most common ML models for predicting a numerical outcome. So, I feel for the 
+purpose of education it will be good to employ all four to see what could be the best outcome.
