@@ -1,0 +1,19 @@
+CREATE TABLE popular_songs(
+	song TEXT,
+	artist TEXT,
+	release_date TEXT,
+	popularity INT,
+	acousticness FLOAT,
+	danceability FLOAT,
+	energy FLOAT,
+	instrumentalness FLOAT,
+	liveness FLOAT,
+	loudness FLOAT,
+	speechiness FLOAT, 
+	tempo FLOAT, 
+	popular_date DATE NOT NULL, 
+	ranking INT NOT NULL, 
+	weeks_on_board INT,
+	genres TEXT,
+	CONSTRAINT unique_song PRIMARY KEY (popular_date, ranking)
+)
