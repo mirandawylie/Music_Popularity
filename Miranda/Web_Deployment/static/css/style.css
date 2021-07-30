@@ -1,0 +1,55 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size:3em;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.name {
+  font-size:4em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+footer {
+  background-color: #343a40;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+}
+
+footer a {
+  color: #fff;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wave {
+  background: linear-gradient(to left, #00c6ff, #328eff);
+  min-height: 350px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wave-svg{
+  width: 100%;
+  transform: translateY(-80px);
+}
+
+.wave-svg-secondary{
+  width: 100%;
+}
+
+.wave-svg-color {
+  margin-top: 30px;
+}
