@@ -8,10 +8,12 @@ h1 {
   font-weight: 400;
 }
 
-h4 {
-  font-family: 'Abril Fatface';
-  font-weight: 400;
-  font-size: 1.75em;
+.nav .nav-item {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.nav-pills .nav-link {
+  background-color: #f4f5f6;
 }
 
 footer {
