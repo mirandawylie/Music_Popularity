@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Google Font -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|'Abril+Fatface'">
 
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -14,13 +14,22 @@
 <!-- Custom styles for this template -->
 <link rel="stylesheet" href="../static/css/style.css">
 
+<style>
+  .nav .nav-item {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .nav-pills .nav-link {
+    background-color: #f4f5f6;
+  }
+</style>
+
 <title>Music Popularity</title>
 </head>
 <body>
   <div class="wave">
         <div class="container header-container"><!-- Header -->
-            <h1 class="name">How popular is K-pop?</h1>
-            <h3 class="subtitle text-center">Use the interactive charts to explore 10 years of music data</h3>
+            <h1>How popular is K-pop?</h1>
             <img src="../static/images/kpop.jpg" width= "700" height = "200" class="img-fluid" alt="Responsive image"/>
         </div>
   </div>
@@ -32,26 +41,33 @@
                 d="M1610,95.3c0,0-216,80-412,80c-98,0-245.8-40.5-395.1-80.9c149.4,46.2,297.1,92.3,395.1,92.3C1394,186.7,1610,95.3,1610,95.3z" />
     </svg>
   </div>
-
 </div><!-- .container Project Description -->
-<div class="container"><!-- .container -->
-  <div class="row">
-    <div class="col-12">
-      <p>K-pop, or Korean pop music, has risen in popularity since 2013. The cultural impact of K-pop is marked by the political activism of K-pop fans and bands like BTS partnering with brands like McDonalds. With as much social and purchasing power as these fans wield, will K-pop artists have staying power and therefore the communities surrounding them?
-        
-      <br></br>
-      Browse the interactive charts pulling Spotify and the Hot 100 Billboard charts data from 2010 - 2020. How does K-pop compare in longevity (i.e. weeks on the Billboard chart) with the most recognized music genres: Country, Dance, Hip-Hop, Latin, Pop and Rock? The musicality tab uses Spotify’s audio features classification that mark acousticness, danceability, energy, instrumentalness, liveness, loudness and speechiness to determine if a certain audio feature plays a role in song popularity. The popularity tab provides a comparison of genre popularity over time. Finally, the prediction tab shows a machine learning model to predict if a song will make it on the Billboard charts for twelve weeks or more. Twelve weeks is the average time a song stays on the Hot 100 Billboard charts.
+<div class="container" style="margin-top: -50px;">
+  <div class="row justify-content-center">
+    <div class="col-md-11 text-center mb-4">
+      <h4>Browse the interactive charts pulling Spotify and the Hot 100 Billboard data from 2010 - 2020</h4>
+    </div>
+    <div class="col-md-6">
+      <p class="lead">
+      K-pop, or Korean pop music, has risen in popularity since 2013. The cultural impact of K-pop is marked by the political activism of K-pop fans and bands like BTS partnering with McDonalds. With as much social and purchasing power as these fans wield, will K-pop artists have staying power? How does K-pop compare in longevity (i.e. weeks on the Billboard chart) with the most recognized music genres: Country, Dance, Hip-Hop, Latin, Pop and Rock?
+      </p>
+    </div>
+        <br></br>
+    <div class="col-md-6">
+      <p class="lead">
+      The Musicality tab uses Spotify’s audio features classification to determine if audio features like danceability plays a role in song popularity. The Popularity tab provides a comparison of genre popularity over time. The Prediction tab shows a machine learning model to predict if a song will make it on the Billboard charts for twelve weeks or more. Twelve weeks is the average time a song stays on the Hot 100 Billboard charts.
+      </p>
     </div><!-- .col-12 -->
   </div><!-- .row -->
 </div><!-- .container -->
 
 <!-- Nav Bar -->
 <div class="container"><!-- .container -->
-  <div class="row"><!-- .row -->
-    <div class="col-12"><!-- .col-12 -->
-      <ul class="nav nav-pills" id="pills-tab" role="tablist">
+  <div class="row justify-content-center<!-- .row -->
+    <div class="col-6"><!-- .col-12 -->
+      <ul class="nav nav-pills nav-fill justify-content-center my-4" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
-          <button class="nav-link" id="longevity-tab" data-bs-toggle="pill" data-bs-target="#longevity" type="button" role="tab" aria-controls="longevity" aria-selected="true">Longevity</button>
+          <button class="nav-link active" id="longevity-tab" data-bs-toggle="pill" data-bs-target="#longevity" type="button" role="tab" aria-controls="longevity" aria-selected="true">Longevity</button>
         </li>
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="musicality-tab" data-bs-toggle="pill" data-bs-target="#musicality" type="button" role="tab" aria-controls="musicality" aria-selected="false">Musicality</button>
@@ -69,9 +85,44 @@
 <!-- Tab content -->
 <div class="tab-content" id="tab-content">
   <!-- Start tab content for Longevity Charts -->
+  <div class="container">
   <div role="tabpanel" class="tab-pane fade show active container"" id="longevity" aria-labelledby="longevity-tab">
-    <div class="row">
-      <div class="col-6"><!-- Total Weeks on Board -->
+    <div class="row align-items-start">
+      <div class="col-md-6"><!-- Average Weeks on Board -->
+        <div class='tableauPlaceholder' id='viz1628101497246' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt='Average Weeks on the Billboard Charts Per Genre Over 10 years ' 
+              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AverageWeekonBoard-Allgenres&#47;Sheet1&#47;1_rss.png' 
+              style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='AverageWeekonBoard-Allgenres&#47;Sheet1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AverageWeekonBoard-Allgenres&#47;Sheet1&#47;1.png' /> 
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object>
+        </div>                
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1628101497246');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+      </div><!-- .col-6 -->
+      <div class="col-md-6"><!-- Total Weeks on Board -->
         <div class='tableauPlaceholder' id='viz1628098604828' style='position: relative'>
           <noscript>
             <a href='#'>
@@ -106,39 +157,7 @@
           vizElement.parentNode.insertBefore(scriptElement, vizElement);                
         </script>
         <br><br/>
-        <div class='tableauPlaceholder' id='viz1628101497246' style='position: relative'>
-          <noscript>
-            <a href='#'>
-              <img alt='Average Weeks on the Billboard Charts Per Genre Over 10 years ' 
-              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AverageWeekonBoard-Allgenres&#47;Sheet1&#47;1_rss.png' 
-              style='border: none' />
-            </a>
-          </noscript>
-          <object class='tableauViz'  style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
-            <param name='name' value='AverageWeekonBoard-Allgenres&#47;Sheet1' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AverageWeekonBoard-Allgenres&#47;Sheet1&#47;1.png' /> 
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-US' />
-          </object>
-        </div>                
-        <script type='text/javascript'>
-          var divElement = document.getElementById('viz1628101497246');
-          var vizElement = divElement.getElementsByTagName('object')[0];
-          vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-          var scriptElement = document.createElement('script');
-          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
-      </div><!-- .col-6 -->
+      </div>
     </div><!-- .row -->
   </div><!-- .container #longevity-->
   <!-- End tab content for Longevity Charts -->
@@ -229,6 +248,7 @@
     </div><!-- .row -->
   </div><!-- .container #predictability->
   <!-- End tab content for Predictability Charts -->
+  </div>
 </div>
 
 <!-- Bootstrap JS -->   
