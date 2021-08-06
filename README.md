@@ -1,57 +1,72 @@
 # K-Pop: How Popular Is It?
-## Comparing 10 Years of Popular Music from *Billboard* Hot 100 Using Spotify API's Audio Features
-Made in collaboration between [Jessica Veilleux](https://github.com/jveilleux2314), [Kailey Davis](https://github.com/kaileymd), [Kenneth Beadle](https://github.com/K-Beadle), and [Miranda Wylie](https://github.com/mirandawylie)
+## Comparing 10 Years of Music Data from *Billboard* Hot 100  and Spotify
+Made in collaboration between [Jessica Veilleux](https://github.com/jveilleux2314), [Kailey Davis](https://github.com/kaileymd), [Kenneth Beadle](https://github.com/K-Beadle), and [Miranda Wylie](https://github.com/mirandawylie). View our [dashboard](https://k-pop-pop.herokuapp.com/). View our [presentation](https://docs.google.com/presentation/d/18R-miYkgG67zDTOXOeS0VitBn73jQj7eH99ADQq1drc/edit?usp=sharing).
 
-K-Pop, or popular music from Korea, is having its moment in the U.S.: its popularity and dedicated fan base have caused cultural waves that touched [the 2020 election, sparked political activism](https://www.cnn.com/2020/06/22/asia/k-pop-fandom-activism-intl-hnk/index.html) and created wildly popular merchandising deals, like [one K-Pop band's McDonald's Meal](https://www.businessinsider.com/mcdonalds-bts-meal-drives-traffic-to-restaurants-over-travis-scott-meal-2021-6). With as much influence as K-Pop has outside of the music world, we wanted to know: how popular is K-Pop music, actually?
+K-pop, or popular music from Korea, is increasing in popularity in the United States, so much so that the Billboard 100 includes it in it’s top 7 genre categories along with Rock and Hip-Hop.
+
+The rise of K-pop and its dedicated fan base has caused cultural waves that touched [the 2020 election, sparked political activism](https://www.cnn.com/2020/06/22/asia/k-pop-fandom-activism-intl-hnk/index.html) and created wildly popular merchandising deals, like [one K-Pop band's McDonald's Meal](https://www.businessinsider.com/mcdonalds-bts-meal-drives-traffic-to-restaurants-over-travis-scott-meal-2021-6). With as much influence as K-Pop has outside of the music world, we wanted to know: how popular is K-Pop music, actually? How does the popularity of K-pop compare with the popularity of other top Billboard 100 music categories: Country, Dance, Hip-Hop, Latin, Pop and Rock?
 
 ### Music Popularity
-There are many elements to what makes music popular. We decided to rely on the *Billboard* charts from 2010 - 2020 to indicate which songs we should look at and use Spotify's API to pull the audio feature breakdown for each song.
+There are many elements to what makes music popular. We decided to rely on song ranking from *Billboard* charts and Spotify’s own popularity score as parameters for popularity. In addition, Spotify gives each song an audio features ranking and we used this ranking to determine similarities in what makes a song popular.
+
+It is worth noting that *Billboard* and Spotify do not classify songs in a genre, so we had to rely on Spotify’s artist genre classification and apply that to all of their songs. For example, if an artist like Lil Nas X is categorized in Pop, Country, and Hip-Hop, then all his songs will appear in each of those genres. While this does duplicate information across genres, the ratios between genres are still relevant. Ultimately, our goal is not to debate genre-blurring songs like *Old Town Road* and place one genre over another.
 
 ### What Do We Hope to Find?
-Using the data from Spotify on the last 10 years of popular music, we hope to see if K-Pop's rankings in the charts reflects its popularity in news headlines. Specifically, we will be looking at the popularity of the top 7 music genres from *Billboard* over the last 10 years to discover trends that show how they rank compared to each other and if Spotify's audio feature data can reveal signature audio features for any genre that may make it more or less popular.
+Using the data from Spotify on the last 10 years of popular music, we hope to see if K-Pop's rankings in the charts reflects its popularity in news headlines. Specifically, we will look at the popularity of the top 7 music genres from *Billboard* by way of how long a song is on the *Billboard* chart. Using Spotify's audio feature data we will examine if certain features like danceability plays a role in song popularity and staying power on the charts.
 
-Additionally, we will be training a machine learning model using Spotify's audio features to predict if a song will stay on the Hot 100 charts for longer than the average (12 weeks).
+Additionally, we will train a machine learning model using Spotify's audio features to predict if a song will stay on the Billboard Hot 100 charts for longer than the average (12 weeks).
+
 
 ## Music Analysis
 
 ### Popularity
-[Popularity of Genre Over Time](/Kailey/Images/Genre_over_time.png)
+![Popularity of Genre Over Time](/Kailey/Images/Genre_over_time.png)
 
-K-Pop is a new genre to the U.S. It hit the Hot 100 in 2012 with Psy's *Gangnam Style* and has consistently stayed on the charts since. While its popularity on this graph appears to be low, it is largely influenced by the number of songs in that genre that hit the charts.
+K-pop is a relatively new music genre in the United States. It hit the Hot 100 in 2012 with Psy's *Gangnam Style* and has consistently stayed on the charts since. While its popularity on this graph appears to be low compared to the other genres, keep in mind the numbers are largely influenced by the number of songs in a genre and not as many artists are contributing to the K-pop genre as the Hip-Hop category in the U.S. market.
 
-[Average Weeks on Board](/Kailey/Images/Avg_Weeks_on_Board.png)
+![Average Weeks on Board](/Kailey/Images/Avg_Weeks_on_Board.png)
 
-The K-Pop songs that do hit the Hot 100 are much more popular than songs of other genres. The average length of time for any song to stay on the Hot 100 is 12 weeks; K-Pop songs average 17.8 weeks and its nearest competitor, Dance songs, average 13 weeks.
+The K-pop songs that hit the Hot 100 are much more popular than songs of other genres. The average length of time for any song to stay on the Hot 100 is 12 weeks. A K-pop song averages 17.8 weeks. For comparison, K-pop’s nearest genre competitor, Dance, has an  average of 13 weeks on the Hot 100 Billboard chart.
 
-Due to the low number of K-Pop songs on the charts over the last 10 years (8,000 compared to nearly 216,000 dance songs) it is hard to say if this staying power is because only the best of the best make it to U.S. audiences, or if there is some other quality that makes K-Pop stand out.
+Due to the low number of K-pop songs on the charts over the last 10 years (8,000 compared to nearly 216,000 dance songs) it is hard to say if this staying power is because only the best of the best make it to U.S. audiences, or if there are other qualities that make K-pop stand out.
 
 ### Spotify Audio Features
-[Audio Features](Kailey/Images/Audio_Features.png)
+Spotify assigns all content on their platform a value between 0 and 1 in each of the following 9 audio features:
+- Acousticness: unaltered by electricity, synthesizers and other sound modifying tools
+- Energy: measure of intensity and activity, feel fast, loud, and noisy
+- Instrumentalness: vocal content or not
+- Liveness: recorded with a live audience or not
+- Loudness: average deibel (-60 and 0 db.) range
+- Speechiness: speaking instead of singing, more for audio book, podcast
+- Tempo: average the beats per minute (BPM)
+- Valence: musical positiveness conveyed by a track (high = happy, euphoric, low = sad, angry)
 
-Spotify assigns every song audio feature values, a value between 0 and 1 representing how much of that feature Spotify believes is present in that song. What immediately stands out is how many features are similar to each other across genres - indicating that songs popular enough to hit the Hot 100 already have a lot in common in areas like energy and acousticness.
+![Audio Features](Kailey/Images/Audio_Features.png)
 
-[Audio Features](Kailey/Images/Audio_Features_kpop.png)
+For the sake of this project we focused on the acousticness, energy, instrumentalness, liveness, loudness and speechiness. What immediately stands out when comparing the features across these genres are the similarities in values. This would indicate that songs popular enough to hit the Hot 100 have much in common in areas like energy and acousticness.
 
-K-Pop mostly differs on instrumentalness, liveness, and speechiness. instrumentalness and speechiness are similar measurements, where speechiness indicates a ration of spoken words vs. music in a track and instrumentalness predicts if a song contains vocals, indicating the presence of vocals and how much they *sound* like spoken words, discounting lyrical noises like "ooh" and "ahh". Liveness detects the presence of an audience.
+![Audio Features](Kailey/Images/Audio_Features_kpop.png)
 
-These are unique features - scoring low in both instrumentalness and speechiness could indicate either a key difference in song composition, or a flaw in Spotify's algorithm when analyzing foreign languages. Scoring so different in liveness is a commentary on how K-Pop bands represent themselves online. In Korea, these bands are known as "idol groups" and are meant to be role models - primarily releasing polished, studio versions of their songs fits the perfect, polished image of these idols.
+K-pop mostly differs on instrumentalness, liveness and speechiness. Instrumentalness and speechiness are similar measurements, where speechiness indicates a ratio of spoken words vs. music in a track and instrumentalness predicts if a song contains vocals, indicating the presence of vocals and how much they *sound* like spoken words, discounting lyrical noises like "ooh" and "ahh." Liveness detects the presence of an audience.
+
+Scoring low in both instrumentalness and speechiness could indicate either a key difference in song composition, or a flaw in Spotify's algorithm when analyzing foreign languages. Scoring so different in liveness is a commentary on how K-pop bands represent themselves online. In Korea, K-pop bands are known as "idol groups" and are seen as role models. Part of the idolization is releasing polished, studio versions of songs that fit the perfect, polished image of these idols.
 
 ## Can AI Predict Everyone's New Favorite Song?
 
 ### Machine Learning
-While Spotify's audio features are difficult to interpret when grouped by genre, can they still tell us something about a song's popularity? The average song on the Hot 100 stayed for 12 weeks. We asked our machine learning model to predict if a song would meet or beat the average, or would the song underperform?
+While Spotify's audio features are difficult to interpret when grouped by genre, can they still tell us something about a song's popularity? The average length of time a song stays on the Hot 100 is 12 weeks. We asked our machine learning model to predict if a song would meet or beat the 12 week average, or would the song underperform?
 
-We tested our data using a neural network model and a Random Forest model due to what we assumed would be complex relationships between our data points. From our complete data set, we only used pre-existing numeric fields - the Spotify audio features, Spotify's popularity metric, and the Hot 100 song ranking. No further numeric manipulation was necessary to scale the features since they were already similar.
+Due to what we assumed would be complex relationships between our individual data points and over 50,000 rows of data, we tested our data using two different machine learning methods: a neural network model and a random forest model. From our complete data set, we used the pre-existing numeric fields of Spotify audio features, Spotify's popularity metric and the Hot 100 song ranking. No further numeric manipulation was necessary to scale the features since they were already similar.
 
-The Random Forest model was our best performing model, at 73.3% accuracy.
+After training the models with 90% of our data and testing on the remaining 10%, the Random Forest model was our best performing model. It scored 3% better than our neural network at 73.3% accuracy.
 
-[Random Forest Model Performance](Kenneth/ML png's/RandomForest_confusion_matrix.png)
+![Random Forest Model Performance](Kenneth/ML png's/RandomForest_confusion_matrix.png)
 
-To help us understand what influenced our model, we had it list the features it used in order of importance.
+To help us understand what influenced our model, we had the model list the features it used in order of importance. We learned that Spotify's audio features were not very useful in making a prediction. However, a song's ranking on the Hot 100 had the most importance and influence on our model by a significant margin.
 
 [Random Forest Feature Importance](Kenneth/ML png's/RandomForest_features.png)
 
-A song's ranking on the Hot 100 had the most importance and influence on our model by a significant margin. Spotify's audio features were not very useful to our model, but we were able to create a model that can predict with some accuracy if a popular song will stay on the charts for longer than average.
+Both the neural network model and a random forest model can predict if a popular song will stay on the charts for longer than average.
 
 ## Conclusion
 Since 2012, K-Pop has shown that it has the ability to stay relevant to U.S. audiences. As massively popular groups like BTS (the band behind *Butter* and *Permission to Dance*, both #1 hits summer 2021) continue to spread awareness of the genre, interest in K-Pop will continue to grow in the U.S.
@@ -60,8 +75,12 @@ Spotify's audio features, while interesting, are mostly inconclusive. Our machin
 
 So does K-Pop's reputation in the headlines as a hot new trend reflect its popularity in the music world? While nothing conclusive stands out from its audio features, K-Pop hits are beloved - meaning that their popularity likely lies *within* their reputation, and with other indicators outside of the purely musical realm.
 
-
-
+## Technologies, Laguages, Tools
+Backend: Python, AWS
+Frontend: HTML, CSS, Bootstrap, Heroku
+Databases: PostgreSQL, pgAdmin, MongoDB
+Libraries: Pandas, Scikit Learn
+Tools: Tableau, Jupyter Notebook, Flask
 
 ## Data Sources
 - [Billboard Hot 100 from Kaggle](https://www.kaggle.com/dhruvildave/billboard-the-hot-100-songs) which documents the position of every song on the Hot 100 from week to week since the 1950's.
