@@ -64,7 +64,7 @@ After training the models with 90% of our data and testing on the remaining 10%,
 
 To help us understand what influenced our model, we had the model list the features it used in order of importance. We learned that Spotify's audio features were not very useful in making a prediction. However, a song's ranking on the Hot 100 had the most importance and influence on our model by a significant margin.
 
-[Random Forest Feature Importance](Kenneth/ML png's/RandomForest_features.png)
+![Random Forest Feature Importance](Kenneth/ML png's/RandomForest_features.png)
 
 Both the neural network model and a random forest model can predict if a popular song will stay on the charts for longer than average.
 
