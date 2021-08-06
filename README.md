@@ -60,11 +60,11 @@ Due to what we assumed would be complex relationships between our individual dat
 
 After training the models with 90% of our data and testing on the remaining 10%, the Random Forest model was our best performing model. It scored 3% better than our neural network at 73.3% accuracy.
 
-![Random Forest Model Performance](Kenneth/ML png's/RandomForest_confusion_matrix.png)
+![Random Forest Model Performance](https://github.com/jveilleux2314/Music_Popularity/blob/main/Kenneth/ML%20png's/RandomForest_confusion_matrix.png)
 
 To help us understand what influenced our model, we had the model list the features it used in order of importance. We learned that Spotify's audio features were not very useful in making a prediction. However, a song's ranking on the Hot 100 had the most importance and influence on our model by a significant margin.
 
-![Random Forest Feature Importance](Kenneth/ML png's/RandomForest_features.png)
+![Random Forest Feature Importance](https://github.com/jveilleux2314/Music_Popularity/blob/main/Kenneth/ML%20png's/RandomForest_features.png)
 
 Both the neural network model and a random forest model can predict if a popular song will stay on the charts for longer than average.
 
