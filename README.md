@@ -58,11 +58,11 @@ While Spotify's audio features are difficult to interpret when grouped by genre,
 
 Due to what we assumed would be complex relationships between our individual data points and over 50,000 rows of data, we tested our data using two different machine learning methods: a neural network model and a random forest model. From our complete data set, we used the pre-existing numeric fields of Spotify audio features, Spotify's popularity metric and the Hot 100 song ranking. No further numeric manipulation was necessary to scale the features since they were already similar.
 
-After training the models with 90% of our data and testing on the remaining 10%, the Random Forest model was our best performing model. It scored 3% better than our neural network at 73.3% accuracy.
+After some experimentation with the training/testing data split, neural network layers and quantity of decision trees to optimize accuracy, we found that the Random Forest model was our best performing model. It trained on 90% of the data and was tested on the remaining 10% due to our large amount of data and resulted in a 73.3% accuracy. The neural network was also successful but only scored at 70% accuracy.
 
 ![Random Forest Model Performance](https://github.com/jveilleux2314/Music_Popularity/blob/main/Kenneth/ML%20png's/RandomForest_confusion_matrix.png)
 
-To help us understand what influenced our model, we had the model list the features it used in order of importance. We learned that Spotify's audio features were not very useful in making a prediction. However, a song's ranking on the Hot 100 had the most importance and influence on our model by a significant margin.
+The downside to both the neural network and Random Forest models is that they can require a lot of computer resources to train the model and *how* they make the decisions they do to make their predictions can be hard to interpret. To help us understand what influenced the Random Forest model, we had the model list the features it used in order of importance. We learned that Spotify's audio features were not very useful in making a prediction. However, a song's ranking on the Hot 100 had the most importance and influence on our model by a significant margin.
 
 ![Random Forest Feature Importance](https://github.com/jveilleux2314/Music_Popularity/blob/main/Kenneth/ML%20png's/RandomForest_features.png)
 
