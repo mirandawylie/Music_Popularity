@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href="static/css/style.css">
+
+<title>Music Popularity</title>
+</head>
+<body>
+  <div class="wave">
+        <div class="container header-container"><!-- Header -->
+            <h1>How popular is K-pop?</h1>
+            <img src="static/images/kpop.jpg" width= "700" height = "200" class="img-fluid" alt="Responsive image"/>
+        </div>
+  </div>
+  <div class="wave-svg">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" opacity="1" width="100%" height="80"
+            preserveAspectRatio="none" viewBox="0 0 1600 200">
+            <path d="M-8,95.3C-8,95.3,189,2,398,2s604,184.7,800,184.7s412-91.4,412-91.4V271H-8V95.3z" />
+            <path
+                d="M1610,95.3c0,0-216,80-412,80c-98,0-245.8-40.5-395.1-80.9c149.4,46.2,297.1,92.3,395.1,92.3C1394,186.7,1610,95.3,1610,95.3z" />
+    </svg>
+  </div>
+<!-- .container Project Description -->
+<div class="container" style="margin-top: -50px;">
+  <div class="row justify-content-center">
+    <div class="col-md-11 text-center mb-4">
+      <h4>Find out with the Interactive Charts of Billboard and Spotify Music Data from 2010 - 2020</h4>
+    </div>
+    <div class="col-md-6">
+      <p class="lead">
+        K-pop, or popular music from Korea, is increasing in popularity in the United States, so much so that the Billboard 100 includes it in it’s top 7 genre categories along with Rock and Hip-Hop. The rise of K-pop and its dedicated fan base has caused cultural waves that touched the <a href="https://www.cnn.com/2020/06/22/asia/k-pop-fandom-activism-intl-hnk/index.html">2020 election</a>, sparked political activism and created wildly successful <a href="https://www.businessinsider.com/mcdonalds-bts-meal-drives-traffic-to-restaurants-over-travis-scott-meal-2021-6">merchandising deals</a>.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <p class="lead">
+        With as much influence as K-pop has outside of the music, we wanted to know how does the popularity of K-pop compare with other top Billboard 100 music categories: Country, Dance, Hip-Hop, Latin, Pop and Rock? Additionally, we trained a machine learning model using Spotify's audio features to predict if a song will stay on the Billboard charts for longer than the average (12 weeks).
+      </p>
+    </div><!-- .col-12 -->
+  </div><!-- .row -->
+</div><!-- .container -->
+
+<!-- Nav Bar -->
+<div class="container"><!-- .container -->
+  <div class="row justify-content-center">
+    <div class="col-6"><!-- .col-12 -->
+      <ul class="nav nav-pills nav-fill justify-content-center my-4" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="findings_tab" data-bs-toggle="pill" data-bs-target="#findings" type="button" role="tab" aria-controls="findings" aria-selected="false">Data Findings</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="machine_learning_tab" data-bs-toggle="pill" data-bs-target="#machine_learning" type="button" role="tab" aria-controls="machine_learning" aria-selected="false">Machine Learning</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="summary_tab" data-bs-toggle="pill" data-bs-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="false">Conclusion</button>
+        </li> 
+      </ul>
+    </div><!-- .col-12 -->
+  </div><!-- .row -->
+</div><!-- .container -->
+
+<!-- Tab content -->
+<div class="tab-content pb-5" id="tab-content">
+  <!-- Start tab content for Findings Charts -->
+  <div role="tabpanel" class="tab-pane show active container" id="findings" aria-labelledby="findings_tab">
+    <div class="row justify-content-center">
+      <div class="col-md-6"><!-- Total Weeks on Board -->
+        <div class='tableauPlaceholder' id='viz1628098604828' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt='Total Weeks on the Billboard per Genre ' 
+              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;We&#47;WeeksOnBoard-AllGenre&#47;WeeksonBoard-AllGenres&#47;1_rss.png' 
+              style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> 
+            <param name='site_root' value='' />
+            <param name='name' value='WeeksOnBoard-AllGenre&#47;WeeksonBoard-AllGenres' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;We&#47;WeeksOnBoard-AllGenre&#47;WeeksonBoard-AllGenres&#47;1.png' /> 
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object>
+        </div>           
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1628098604828');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          vizElement.style.width='100%';
+          vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+        <p class="lead mt-4">
+          K-pop is a relatively new music genre in the United States. Since first hitting the Hot 100 in 2012 with Psy's Gangnam Style, K-pop has consistently stayed on the charts. While total weeks on the Billboard appears to be low compared to the other genres, keep in mind the numbers are largely influenced by the number of songs in a genre and not as many artists are contributing to the K-pop genre as the Hip-Hop category in the U.S. market.
+        </p>
+      </div><!-- .col-x -->
+      <div class="col-md-6"><!-- Average Weeks on Board -->
+        <div class='tableauPlaceholder' id='viz1628101497246' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt='Average Weeks on the Billboard Charts Per Genre Over 10 years ' 
+              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AverageWeekonBoard-Allgenres&#47;Sheet1&#47;1_rss.png' 
+              style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='AverageWeekonBoard-Allgenres&#47;Sheet1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Av&#47;AverageWeekonBoard-Allgenres&#47;Sheet1&#47;1.png' /> 
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object>
+        </div>                
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1628101497246');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+        <p class="lead mt-4">
+            The K-pop songs that hit the Hot 100 are more likely to stay on the charts longer than songs of other genres. With an average of 12 weeks, a K-pop song averages 17.8 weeks on the charts. K-pop’s nearest genre competitor, Dance, has an average of 13 weeks. Also, note K-pop has a lower amount of songs on the charts from 2010-2020 (8,000 compared to nearly 216,000 dance songs).
+          </p>
+      </div><!-- .col-x -->
+      <div class="col-lg-10"><!-- Audio Features -->
+        <div class='tableauPlaceholder' id='viz1628225614023' style='position: relative'>
+          <noscript>
+            <a href='#'>
+              <img alt='Spotify Audio Features per Genre ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fe&#47;FeaturesPerGenre&#47;Sheet3&#47;1_rss.png' style='border: none' />
+            </a>
+          </noscript>
+          <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='FeaturesPerGenre&#47;Sheet3' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fe&#47;FeaturesPerGenre&#47;Sheet3&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object>
+        </div>
+        <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1628225614023');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+          <p class="lead mt-4">
+          Spotify assigns all content on their platform a value between 0 and 1 in each of the following 9 audio features (acousticness, energy, instrumentalness, liveness, loudness, speechiness,  tempo and valence). For the sake of this project we focused on 6 of these features.
+          <br><br>
+          K-pop scoring low in both instrumentalness and speechiness could indicate either a key difference in song composition, or a flaw in Spotify's algorithm when analyzing non-English languages. In addition, scoring low in liveness is a commentary on how K-pop bands represention. In Korea, K-pop bands are known as "idol groups" and are seen as role models. Part of the idolization is releasing polished, studio versions of songs that fit a polished image of these idols.  
+          </p>
+      </div><!-- .col-x -->
+    </div><!-- .row -->
+  </div><!-- .container #findings-->
+  <!-- End tab content for FindingsCharts -->
+  <!-- Start tab content for Machine Learning -->
+  <div role="tabpanel" class="tab-pane container" id="machine_learning" aria-labelledby="machine_learning_tab" >
+    <div class="row">
+      <div class="col-md-6">        
+        <p class="lead">
+          While Spotify's audio features are difficult to interpret when grouped by genre, can they still tell us something about a song's popularity? We asked our machine learning model to predict if a song would meet or beat the 12 week average, or would the song underperform?
+          <br><br>
+          Due to what we assumed would be complex relationships between our individual data points and over 50,000 rows of data, we tested our data using two different machine learning methods: a neural network model and a random forest model. 
+          <br><br>
+          From our complete data set, we used the pre-existing numeric fields of Spotify audio features, Spotify's popularity metric and the Hot 100 song ranking. No further numeric manipulation was necessary to scale the features since they were already similar.
+          <br><br>
+          After some experimentation with the training/testing data split, neural network layers and quantity of decision trees to optimize accuracy, we found that the Random Forest model was our best performing model. It trained on 90% of the data and was tested on the remaining 10% due to our large amount of data and resulted in a 73.3% accuracy. The neural network was also successful but only scored at 70% accuracy.
+          <br><br>
+          Both the neural network model and a random forest model can predict if a popular song will stay on the charts for longer than average. We learned that Spotify's audio features were not very useful in making a prediction. However, a song's ranking on the Hot 100 had the most importance and influence on our model by a significant margin.
+        </p>
+        </div>
+        <div class="col-md-6">
+          <img src="static/images/RandomForest_accuracy.png" width= "700" height = "200" class="img-fluid" alt="Responsive image"/>
+          <img src="static/images/RandomForest_confusion_matrix.png" width= "700" height = "200" class="img-fluid" alt="Responsive image"/>
+          <img src="static/images/RandomForest_features.png" width= "700" height = "200" class="img-fluid" alt="Responsive image"/>
+      </div><!-- .col-12 -->
+    </div><!-- .row -->
+  </div><!-- .container #machine_learning-->
+  <!-- End tab content for Machine Learning Visuals -->
+  <!-- Start tab content for Summary -->
+  <div role="tabpanel" class="tab-pane container" id="summary" aria-labelledby="summary_tab" >
+    <div class="row justify-content-center">
+      <div class="col-lg-10" ><!-- Genre Popularity Charts-->
+          <img src="static/images/Genre_popularity.png" class="img-fluid" alt="Responsive image"/>
+          <div class="mt-4">
+          Since 2012, K-Pop has shown that it has the ability to stay relevant to U.S. audiences. As massively popular bands like BTS (2021 #1 hits "Butter" and "Permission to Dance") continue to spread awareness of the genre, interest in K-Pop will continue to grow in the U.S.
+          </div>
+      </div> 
+          <div class="col-md-6 mt-4">
+            <p class="lead">
+              Spotify's audio features, while interesting, are mostly inconclusive. Our machine learning model shows that the most important feature for helping to determine how long a song will stay on the Hot 100 is its ranking - in other words, the more popular you already are, the more likely you are to stay. Spotify shows that popular songs often have similar features, but at this level of popularity, those features aren't very useful to differentiate songs from each other.
+            </p>
+          </div>
+          <div class="col-md-6 mt-4">
+            <p class="lead">
+              So does K-pop's reputation in the headlines as a hot new trend reflect its popularity in the music world? While nothing conclusive stands out from its audio features, K-pop hits are beloved - meaning that their popularity likely lies within their reputation, and with other indicators outside of the purely musical realm.
+            </p>
+      </div><!-- .col-x -->
+    </div>
+  </div><!-- .container #summary-->
+  <!-- End tab content for Summary -->
+</div><!-- .tab-content #tab-content -->
+
+<!-- Bootstrap JS -->   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
