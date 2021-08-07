@@ -1,10 +1,10 @@
-# K-Pop: How Popular Is It?
-## Comparing 10 Years of Music Data from *Billboard* Hot 100  and Spotify
+# K-pop: How Popular Is It?
+## Comparing 10 Years of Music Data from *Billboard* Hot 100 and Spotify to Find Out
 Made in collaboration between [Jessica Veilleux](https://github.com/jveilleux2314), [Kailey Davis](https://github.com/kaileymd), [Kenneth Beadle](https://github.com/K-Beadle), and [Miranda Wylie](https://github.com/mirandawylie). View our [dashboard](https://k-pop-pop.herokuapp.com/). View our [presentation](https://docs.google.com/presentation/d/18R-miYkgG67zDTOXOeS0VitBn73jQj7eH99ADQq1drc/edit?usp=sharing).
 
 K-pop, or popular music from Korea, is increasing in popularity in the United States, so much so that the Billboard 100 includes it in it’s top 7 genre categories along with Rock and Hip-Hop.
 
-The rise of K-pop and its dedicated fan base has caused cultural waves that touched [the 2020 election, sparked political activism](https://www.cnn.com/2020/06/22/asia/k-pop-fandom-activism-intl-hnk/index.html) and created wildly popular merchandising deals, like [one K-Pop band's McDonald's Meal](https://www.businessinsider.com/mcdonalds-bts-meal-drives-traffic-to-restaurants-over-travis-scott-meal-2021-6). With as much influence as K-Pop has outside of the music world, we wanted to know: how popular is K-Pop music, actually? How does the popularity of K-pop compare with the popularity of other top Billboard 100 music categories: Country, Dance, Hip-Hop, Latin, Pop and Rock?
+The rise of K-pop and its dedicated fan base has caused cultural waves that touched [the 2020 election, sparked political activism](https://www.cnn.com/2020/06/22/asia/k-pop-fandom-activism-intl-hnk/index.html) and created wildly popular merchandising deals, like [one K-pop band's McDonald's Meal](https://www.businessinsider.com/mcdonalds-bts-meal-drives-traffic-to-restaurants-over-travis-scott-meal-2021-6). With as much influence as K-pop has outside of the music world, we wanted to know: how popular is K-pop music, actually? How does the popularity of K-pop compare with the popularity of other top Billboard 100 music categories: Country, Dance, Hip-Hop, Latin, Pop and Rock?
 
 ### Music Popularity
 There are many elements to what makes music popular. We decided to rely on song ranking from *Billboard* charts and Spotify’s own popularity score as parameters for popularity. In addition, Spotify gives each song an audio features ranking and we used this ranking to determine similarities in what makes a song popular.
@@ -12,7 +12,7 @@ There are many elements to what makes music popular. We decided to rely on song 
 It is worth noting that *Billboard* and Spotify do not classify songs in a genre, so we had to rely on Spotify’s artist genre classification and apply that to all of their songs. For example, if an artist like Lil Nas X is categorized in Pop, Country, and Hip-Hop, then all his songs will appear in each of those genres. While this does duplicate information across genres, the ratios between genres are still relevant. Ultimately, our goal is not to debate genre-blurring songs like *Old Town Road* and place one genre over another.
 
 ### What Do We Hope to Find?
-Using the data from Spotify on the last 10 years of popular music, we hope to see if K-Pop's rankings in the charts reflects its popularity in news headlines. Specifically, we will look at the popularity of the top 7 music genres from *Billboard* by way of how long a song is on the *Billboard* chart. Using Spotify's audio feature data we will examine if certain features like danceability plays a role in song popularity and staying power on the charts.
+Using the data from Spotify on the last 10 years of popular music, we hope to see if K-pop's rankings in the charts reflects its popularity in news headlines. Specifically, we will look at the popularity of the top 7 music genres from *Billboard* by way of how long a song is on the *Billboard* chart. Using Spotify's audio feature data we will examine if certain features like danceability plays a role in song popularity and staying power on the charts.
 
 Additionally, we will train a machine learning model using Spotify's audio features to predict if a song will stay on the Billboard Hot 100 charts for longer than the average (12 weeks).
 
@@ -45,8 +45,6 @@ Spotify assigns all content on their platform a value between 0 and 1 in each of
 
 For the sake of this project we focused on the acousticness, energy, instrumentalness, liveness, loudness and speechiness. What immediately stands out when comparing the features across these genres are the similarities in values. This would indicate that songs popular enough to hit the Hot 100 have much in common in areas like energy and acousticness.
 
-![Audio Features](Kailey/Images/Audio_Features_kpop.png)
-
 K-pop mostly differs on instrumentalness, liveness and speechiness. Instrumentalness and speechiness are similar measurements, where speechiness indicates a ratio of spoken words vs. music in a track and instrumentalness predicts if a song contains vocals, indicating the presence of vocals and how much they *sound* like spoken words, discounting lyrical noises like "ooh" and "ahh." Liveness detects the presence of an audience.
 
 Scoring low in both instrumentalness and speechiness could indicate either a key difference in song composition, or a flaw in Spotify's algorithm when analyzing foreign languages. Scoring so different in liveness is a commentary on how K-pop bands represent themselves online. In Korea, K-pop bands are known as "idol groups" and are seen as role models. Part of the idolization is releasing polished, studio versions of songs that fit the perfect, polished image of these idols.
@@ -69,11 +67,11 @@ The downside to both the neural network and Random Forest models is that they ca
 Both the neural network model and a random forest model can predict if a popular song will stay on the charts for longer than average.
 
 ## Conclusion
-Since 2012, K-Pop has shown that it has the ability to stay relevant to U.S. audiences. As massively popular groups like BTS (the band behind *Butter* and *Permission to Dance*, both #1 hits summer 2021) continue to spread awareness of the genre, interest in K-Pop will continue to grow in the U.S.
+Since 2012, K-pop has shown that it has the ability to stay relevant to U.S. audiences. As massively popular groups like BTS (the band behind *Butter* and *Permission to Dance*, both #1 hits summer 2021) continue to spread awareness of the genre, interest in K-pop will continue to grow in the U.S.
 
 Spotify's audio features, while interesting, are mostly inconclusive. Our machine learning model shows that the most important feature for helping to determine how long a song will stay on the Hot 100 *is* its ranking - in other words, the more popular you already are, the more likely you are to stay. Spotify shows that popular songs often have similar features, but at this level of popularity, those features aren't very useful to differentiate songs from each other.
 
-So does K-Pop's reputation in the headlines as a hot new trend reflect its popularity in the music world? While nothing conclusive stands out from its audio features, K-Pop hits are beloved - meaning that their popularity likely lies *within* their reputation, and with other indicators outside of the purely musical realm.
+So does K-pop's reputation in the headlines as a hot new trend reflect its popularity in the music world? While nothing conclusive stands out from its audio features, K-pop hits are beloved - meaning that their popularity likely lies *within* their reputation, and with other indicators outside of the purely musical realm.
 
 ## Technologies, Laguages, Tools
 Backend: Python, AWS
