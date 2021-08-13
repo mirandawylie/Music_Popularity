@@ -73,6 +73,9 @@ Spotify's audio features, while interesting, are mostly inconclusive. Our machin
 
 So does K-pop's reputation in the headlines as a hot new trend reflect its popularity in the music world? While nothing conclusive stands out from its audio features, K-pop hits are beloved - meaning that their popularity likely lies *within* their reputation, and with other indicators outside of the purely musical realm.
 
+## Recommendations
+We would like to expand the definition of popularity by including web-scraping of Twitter mentions, the number of Instagram followers a band has and other social media metrics.
+
 ## Technologies, Laguages, Tools
 Backend: Python, AWS
 Frontend: HTML, CSS, Bootstrap, Heroku
