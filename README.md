@@ -77,11 +77,11 @@ So does K-pop's reputation in the headlines as a hot new trend reflect its popul
 We would like to expand the definition of popularity by including web-scraping of Twitter mentions, the number of Instagram followers a band has and other social media metrics.
 
 ## Technologies, Languages, Tools
-Backend: Python, AWS
-Frontend: HTML, CSS, Bootstrap, Heroku
-Databases: PostgreSQL, pgAdmin, MongoDB
-Libraries: Pandas, Scikit Learn
-Tools: Tableau, Jupyter Notebook, Flask
+Backend: Python, AWS <br>
+Frontend: HTML, CSS, Bootstrap, Heroku<br>
+Databases: PostgreSQL, pgAdmin, MongoDB<br>
+Libraries: Pandas, Scikit Learn<br>
+Tools: Tableau, Jupyter Notebook, Flask<br>
 
 ## Data Sources
 - [Billboard Hot 100 from Kaggle](https://www.kaggle.com/dhruvildave/billboard-the-hot-100-songs) which documents the position of every song on the Hot 100 from week to week since the 1950's.
