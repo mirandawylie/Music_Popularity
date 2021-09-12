@@ -20,11 +20,11 @@ Additionally, we will train a machine learning model using Spotify's audio featu
 ## Music Analysis
 
 ### Popularity
-![Popularity of Genre Over Time](/Kailey/Images/Genre_over_time.png)
+![Popularity of Genre Over Time](Images/Genre_over_time.png)
 
 K-pop is a relatively new music genre in the United States. It hit the Hot 100 in 2012 with Psy's *Gangnam Style* and has consistently stayed on the charts since. While its popularity on this graph appears to be low compared to the other genres, keep in mind the numbers are largely influenced by the number of songs in a genre and not as many artists are contributing to the K-pop genre in the U.S. market as they are to Hip Hop, for example.
 
-![Average Weeks on Board](/Kailey/Images/Avg_Weeks_on_Board.png)
+![Average Weeks on Board](Images/Avg_Weeks_on_Board.png)
 
 The K-pop songs that hit the Hot 100 are much more popular than songs of other genres. The average length of time for any song to stay on the Hot 100 is 12 weeks. A K-pop song averages 17.8 weeks. For comparison, K-pop’s nearest genre competitor, Dance, has an  average of 13 weeks on the Hot 100 Billboard chart.
 
@@ -41,7 +41,7 @@ Spotify assigns all content on their platform a value between 0 and 1 in each of
 - Tempo: average the beats per minute (BPM)
 - Valence: musical positiveness conveyed by a track (high = happy, euphoric, low = sad, angry)
 
-![Audio Features](Kailey/Images/Audio_Features.png)
+![Audio Features](Images/Audio_Features.png)
 
 For the sake of this project we focused on the acousticness, energy, instrumentalness, liveness, loudness and speechiness. What immediately stands out when comparing the features across these genres are the similarities in values. This would indicate that songs popular enough to hit the Hot 100 have much in common in areas like energy and acousticness.
 
